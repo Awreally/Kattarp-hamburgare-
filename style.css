@@ -1,0 +1,24 @@
+body {
+    background-color: beige;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.itemcontainer {
+    text-align: center;
+}
+
+.itemcontainer img {
+    max-width: 400px;
+}
+
+.itemcontainer:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 18px 40px rgba(15,23,42,0.12);
+}
