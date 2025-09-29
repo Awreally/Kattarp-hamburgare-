@@ -1,5 +1,5 @@
 
-.container {
+.containers {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -7,15 +7,20 @@
     gap: 2rem;
 }
 
-.itemcontainer {
+.itemcontainers {
     text-align: center;
+    padding: 1rem;
 }
 
-.itemcontainer img {
+.itemcontainers img {
     max-width: 400px;
 }
 
-.itemcontainer:hover {
+.itemcontainers:hover {
     transform: translateY(-8px) scale(1.01);
     box-shadow: 0 18px 40px rgba(15,23,42,0.12);
+}
+
+.menuhead {
+    text-align: center;
 }
