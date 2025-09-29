@@ -1,17 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Jost", sans-serif;
+}
+
 body {
   background-color: rgb(55, 55, 55);
 }
 
 .container {
   background-color: rgb(98, 98, 98);
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: auto;
-  margin: 0;
+  margin: 50px auto;
   padding: 50px;
   flex-wrap: wrap;
+  border-radius: 20px;
+  max-width: 800px;
+}
+
+img {
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+h1 {
+  color: #e2e2e2;
+  margin-bottom: 25px;
+  font-size: 50px;
+}
+
+.container img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 100%;
+  min-width: 200px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  position: relative; /* Lägg till detta för att göra header till referenspunkt */
 }
 
 #menu {
@@ -19,11 +55,12 @@ body {
   flex-direction: column;
   background-color: #333;
   position: absolute;
-  top: 50px;
-  right: 0;
+  top: 100%; /* Placera menyn direkt under headern */
+  right: 10px; /* Justera för att passa hamburgarikonen */
   width: 200px;
   padding: 10px;
   border-radius: 5px;
+  z-index: 10; /* Säkerställ att menyn visas ovanför andra element */
 }
 
 #menu a {
@@ -31,6 +68,13 @@ body {
   text-decoration: none;
   padding: 8px 0;
   display: block;
+}
+
+#menu a:hover {
+  color: #333;
+  background-color: #fff;
+  padding: 0 5px;
+  border-radius: 5px;
 }
 
 #hamburger {
@@ -71,5 +115,22 @@ body {
 
   #hamburger {
     display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .container img {
+    width: 90vw;
+    min-width: 250px;
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 30px;
   }
 }
